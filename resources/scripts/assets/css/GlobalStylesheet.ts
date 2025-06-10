@@ -3,16 +3,16 @@ import { createGlobalStyle } from 'styled-components/macro';
 
 export default createGlobalStyle`
     body {
-        ${tw`font-sans bg-neutral-800 text-neutral-200`};
+        ${tw`font-sans bg-black text-teal-400`}; /* Changed to black background, aqua text */
         letter-spacing: 0.015em;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        ${tw`font-medium tracking-normal font-header`};
+        ${tw`font-medium tracking-normal font-header text-teal-500`}; /* Headings will be a slightly brighter aqua */
     }
 
     p {
-        ${tw`text-neutral-200 leading-snug font-sans`};
+        ${tw`text-teal-300 leading-snug font-sans`}; /* Paragraphs will be a slightly darker aqua */
     }
 
     form {
@@ -45,7 +45,8 @@ export default createGlobalStyle`
         border-right-width: 4px;
         border-left-width: 4px;
         -webkit-border-radius: 9px 4px;
-        -webkit-box-shadow: inset 0 0 0 1px hsl(211, 10%, 53%), inset 0 0 0 4px hsl(209deg 18% 30%);
+        /* Adjusted scrollbar thumb to be a shade of aqua/cyan */
+        -webkit-box-shadow: inset 0 0 0 1px hsl(180, 100%, 30%), inset 0 0 0 4px hsl(180deg 100% 20%);
     }
 
     ::-webkit-scrollbar-track-piece {
